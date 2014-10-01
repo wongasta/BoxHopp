@@ -1,0 +1,33 @@
+{
+    "name": "BoxHopp Website",
+    "version": "1.0.0",
+    "authors": [
+        "Yixin Xia <yxia@utexas.edu>"
+    ],
+    "description": "BoxHopp website",
+    "main": "index.html",
+    "keywords": [
+        "BoxHopp"
+    ],
+    "license": "MIT",
+    "homepage": "http://www.boxhopp.com",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components",
+        "test",
+        "tests"
+    ],
+    "dependencies": {
+        "jquery": "latest",
+        "jquery-ui": "latest",
+        "jquery-waypoints": "latest",
+        "bootstrap": "latest"
+    },
+    "install" : {
+        "path"  : {
+            "js": "_js/",
+            "css": "_css/"
+        }
+    }
+}
