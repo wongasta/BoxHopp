@@ -1,0 +1,310 @@
+@import '_prepend';
+
+
+
+@include keyframes(bounceArrow) {
+  0% {
+    margin-top: 0;
+    opacity: 1;
+  }
+  50% {
+    margin-top: 20px;
+    opacity: 0.6;
+  }
+  100% {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+
+#moverHead{
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  background-image: url(../images/bg04-1200.jpg);
+  color: #000;
+  @media(max-width: 1500px) {
+    background-size: 120% auto;
+  }
+  @media(max-width: 1200px) {
+    background-image: url(../images/bg04-768.jpg);
+    background-size: 100% auto;
+  }
+  @media(max-width: 960px) {
+    background-size: 150% auto;
+  }
+  @include respond-to('mobile'){
+    background-image: url(../images/bg04-400.jpg);
+    padding-top: 80px;
+  }
+
+  .mainLogo {
+    height: 500px;
+    overflow: hidden;
+    padding-top: 0px;
+    @include respond-to('mobile'){
+      height: 370px;
+    }
+
+    .row {
+      padding-top: 30px;
+
+      @include respond-to('mobile'){
+        padding-top: 50px;
+      }
+
+      @include respond-to('tablet'){
+        width: 720px;
+      }
+
+      @include respond-to('mobile'){
+        width: 300px;
+        img {
+          width: 70%;
+        }
+      }
+
+      h1 {
+        font-family: futuramedium;
+        font-size: 40px;
+        color: #FFF;
+        padding: 20px 0 0 0;
+
+        @include respond-to('tabletS'){
+          font-size: 45px;
+        }
+        @include respond-to('mobile'){
+          font-size: 25px;
+        }
+      }
+
+      h2 {
+        color: #FFF;
+        font-family: helvetica_cyplain;
+        font-size: 26px;
+
+        @include respond-to('tabletS'){
+          font-size: 18px;
+        }
+        @include respond-to('mobile'){
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .arrowCont{
+    position: relative;
+    text-align: center;
+    img{
+      position: relative;
+      padding-bottom: 60px;
+      width: 37px;
+      @include animation('bounceArrow 2s infinite');
+    }
+  }
+}
+
+.laptopDiv{
+  padding-top: 10%;
+  width: 100%;
+  height: auto;
+
+  .row{
+    h2{
+      font-family: futuramedium;
+      font-size: 30px;
+      color: #231f20;
+      text-transform: uppercase;
+
+      @include respond-to('mobile'){
+        font-size: 20px;
+      }
+    }
+
+    .laptop{
+      margin: 10% 0;
+
+      img{
+        width: 90%;
+      }
+    }
+  }
+}
+
+.customDiv{
+  width: 100%;
+  background: #1b5a68;
+  padding: 6% 0;
+  overflow: hidden;
+
+  .row{
+
+    .leftCol{
+      width: 35%;
+      @include respond-to('tablet'){
+        width: 100%;
+      }
+
+      p{
+        text-align: left;
+        font-family: futuramedium;
+        font-size: 20px;
+        color: #fff;
+        text-transform: uppercase;
+        margin: 35px 0;
+
+        @include respond-to('tablet'){
+          text-align: center;
+          font-size: 18px;
+        }
+        @include respond-to('mobile'){
+          font-size: 14px;
+          margin: 15px 0;
+          padding: 0 10px;
+        }
+      }
+    }
+    .rightCol{
+      width:65%;
+      text-align: right;
+      position: relative;
+      @include respond-to('tablet'){
+        width: 100%;
+        text-align: center;
+      }
+
+      img{
+        width: 200px;
+        padding: 0 15px 0;
+        position: relative;
+        padding-top: 0;
+        @include transition(all 0.3s ease-out);
+        top: 550px;
+        margin-bottom: 50px;
+        @include respond-to('tablet'){
+          top: 550px;
+        }
+        @include respond-to('mobile'){
+          width: 30%;
+        }
+      }
+      img:nth-child(2){
+        padding-top: 100px;
+        top: 650px;
+        @include respond-to('tablet'){
+          padding-top: 0;
+          top: 550px;
+        }
+      }
+      img:nth-child(3){
+        padding-top: 200px;
+        top: 850px;
+        @include respond-to('tablet'){
+          padding-top: 0;
+          top: 550px;
+        }
+      }
+    }
+
+    >div{
+      float: left;
+
+      @include respond-to('tablet'){
+        clear: both;
+      }
+    }
+  }
+}
+
+.ctaDiv{
+  width: 100%;
+  height: 700px;
+  padding: 6% 0;
+  overflow: hidden;
+
+  @include respond-to('mobile'){
+    height: auto;
+  }
+
+  .row{
+
+    .choice{
+      text-align: center;
+
+      >div{
+        float: left;
+        width: 50%;
+        text-align: center;
+        padding: 100px 0;
+        height: auto;
+
+        a{
+          width: 270px;
+          height: 466px;
+          background: url(../images/mobFrame.png) top left no-repeat;
+          border-radius: 40px;
+          display: block;
+          margin: 0 auto;
+          font-family: futuramedium;
+          font-size: 48px;
+          font-weight: bold;
+          color: #fff;
+          text-decoration: none;
+          padding: 150px 35px;
+          @include transition(all 0.3s ease-out);
+        }
+
+        a.signup{
+          background-color: rgba(173, 72, 55, 0.8);
+
+          &:hover{
+            background-color: rgba(173, 72, 55, 1);
+          }
+        }
+
+        a.pricing{
+          background-color: rgba(38, 75, 98, 0.8);
+
+          &:hover{
+            background-color: rgba(38, 75, 98, 1);
+          }
+        }
+
+      }
+    }
+
+    .choiceMob{
+      padding: 15px 0 30px 0;
+      a{
+        display: block;
+        width: 80%;
+        height: 50px;
+        font-family: futuramedium;
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        text-align: center;
+        background: #BA0F0F;
+        margin: 0 auto;
+        margin-top: 15px;
+      }
+
+      a:hover{
+        text-decoration: none;
+      }
+
+    }
+
+    h2{
+      font-family: futuramedium;
+      font-size: 30px;
+      color: #231f20;
+      text-transform: uppercase;
+
+      @include respond-to('mobile'){
+        font-size: 18px;
+      }
+    }
+  }
+}

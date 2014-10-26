@@ -1,0 +1,318 @@
+@import '_prepend';
+
+.jumpBox{
+  @include respond-to('mobile'){
+    top: 190px;
+  }
+}
+
+#movingCon {
+  width: 100%;
+  position: relative;
+
+  .block1 {
+    @include respond-to('mobile'){
+      height: 540px;
+    }
+    .textCont {
+      position: absolute;
+      width: 100%;
+      margin: 0 auto;
+      .text {
+        width: 1080px;
+        @include respond-to('tablet'){
+          width: 720px;
+        }
+        @include respond-to('mobile'){
+          width: 320px;
+        }
+        margin: 0 auto;
+        text-align: center;
+
+        h2 {
+          margin-top: 35px;
+          font-family: futuramedium, arial;
+          font-size: 55px;
+          @include respond-to('tablet'){
+            font-size: 50px;
+          }
+          @include respond-to('mobile'){
+            font-size: 28px;
+          }
+        }
+        p {
+          font-family: futuramedium, arial;
+          font-size: 20px;
+          margin: 5px 0;
+          @include respond-to('tablet'){
+            font-size: 18px;
+          }
+          @include respond-to('mobile'){
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .block2, .block4 {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+
+    font-family: futuramedium;
+    font-size: 30px;
+    color: #fff;
+
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: fixed;
+    background-size: 100% auto;
+    display: block;
+
+    .row {
+      z-index: 1;
+      width: 1080px;
+      margin: 0 auto;
+      p {
+        padding: 0 10px;
+      }
+
+      @include respond-to('tablet'){
+        width: 720px;
+        font-size: 28px;
+        .botText {
+          font-size: 28px;
+        }
+      }
+      @include respond-to('mobile'){
+        width: 320px;
+        font-size: 18px;
+        .botText {
+          font-size: 22px;
+          text-align: center;
+        }
+      }
+    }
+
+  }
+
+  .block2 {
+
+    .botText {
+      @include respond-to('mobile'){
+        font-size: 26px;
+      }
+    }
+
+    padding-top: 130px;
+    @include respond-to('mobile'){
+      height: 300px;
+      padding-top: 80px;
+    }
+
+    background-image: url(../images/bg02-1000.jpg);
+    z-index: -1;
+    @include respond-to('tablet'){
+      background-image: url(../images/bg02-768.jpg);
+      background-size: cover;
+    }
+    @include respond-to('mobile'){
+      background-image: url(../images/bg02-400.jpg);
+      background-size: cover;
+    }
+    p {
+      text-align: center;
+    }
+
+    .botText {
+      text-align: right;
+      font-size: 50px;
+      margin-top: 75px;
+
+      @include respond-to('mobile'){
+        margin-top: 10px;
+      }
+    }
+  }
+
+  .block4 {
+
+    background-image: url(../images/bg03-1000.jpg);
+    z-index: -1;
+    @include respond-to('tablet'){
+      background-image: url(../images/bg03-768.jpg);
+      background-size: cover;
+    }
+    @include respond-to('mobile'){
+      background-image: url(../images/bg03-400.jpg);
+      background-size: cover;
+    }
+    p {
+      text-align: left;
+    }
+
+
+    .topText {
+      font-size: 50px;
+      margin-top: 75px;
+      @include respond-to('tablet'){
+        font-size: 40px;
+      }
+      @include respond-to('mobile'){
+        font-size: 38px;
+        text-align: center;
+      }
+
+    }
+  }
+
+  .block3 {
+    width: 100%;
+    height: 550px;
+    overflow: hidden;
+    @include respond-to('tablet'){
+      height: 500px;
+    }
+
+    @include respond-to('mobile'){
+      height: 650px;
+      .phoneImg{
+        position: relative;
+        bottom: -580px;
+      }
+    }
+
+
+    .row {
+      width: 1080px;
+      height: 100%;
+      margin: 0 auto;
+      font-family: futuramedium, arial;
+      font-size: 28px;
+      color: #3c3c3c;
+      padding-top: 40px;
+      @include respond-to('tablet'){
+        width: 720px;
+      }
+      @include respond-to('mobile'){
+        width: 320px;
+      }
+
+      h3 {
+        font-size: 50px;
+        margin: 25px 0 45px 0;
+        @include respond-to('tablet'){
+          font-size: 45px;
+        }
+        @include respond-to('mobile'){
+          font-size: 35px;
+        }
+      }
+
+      p {
+        text-align: left;
+        margin: 20px 0;
+        padding-left: 6%;
+        @include respond-to('tablet'){
+          font-size: 20px;
+        }
+
+        @include respond-to('mobile'){
+          font-size: 16px;
+          padding-left: 0px;
+          text-align: center;
+        }
+      }
+
+      .appPopMob {
+        text-align: center;
+        @include respond-to('mobile'){
+          img{
+            width: 70%;
+            height: auto;
+          }
+        }
+      }
+
+      .appPop {
+        float: left;
+        width: 37.5%;
+        position: relative;
+        @include respond-to('mobile'){
+          clear: both;
+          width: 100%;
+          text-align: center;
+        }
+
+        img {
+          position: relative;
+          bottom: -530px;
+          @include respond-to('tablet'){
+            width: 80%;
+          }
+        }
+      }
+
+      .desc {
+        float: left;
+        width: 62.5%;
+        @include respond-to('mobile'){
+          clear: both;
+          width: 100%;
+          text-align: center;
+        }
+      }
+
+    }
+  }
+
+  .block5{
+    .row{
+      width:1080px;
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+
+      @include respond-to('tablet'){
+        width: 720px;
+      }
+      @include respond-to('mobile'){
+        width: 320px;
+      }
+
+      hr{
+        border: none;
+        width: 100%;
+        height: 3px;
+        background: url(../images/divider.png) top center no-repeat;
+      }
+
+      .topText{
+        font-size:36px;
+        font-family: helveticathin, arial;
+        @include respond-to('tablet'){
+          font-size: 26px;
+          padding: 0 10px;
+        }
+        @include respond-to('mobile'){
+          font-size: 22px;
+        }
+
+      }
+      .botText{
+        font-size: 22px;
+         margin: 30px 0;
+        @include respond-to('tablet'){
+          font-size: 20px;
+        }
+        @include respond-to('mobile'){
+          font-size: 18px;
+        }
+      }
+
+    }
+  }
+
+}

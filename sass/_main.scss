@@ -1,0 +1,451 @@
+$picHeight: 45px;
+
+@font-face {
+  font-family: 'futuramedium';
+  src: url('../fonts/futura-webfont.eot');
+  src: url('../fonts/futura-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/futura-webfont.woff2') format('woff2'), url('../fonts/futura-webfont.woff') format('woff'), url('../fonts/futura-webfont.ttf') format('truetype'), url('../fonts/futura-webfont.svg#futuramedium') format('svg');
+}
+
+@font-face {
+  font-family: 'helvetica_cyplain';
+  src: url('../fonts/helveticacy-webfont.eot');
+  src: url('../fonts/helveticacy-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticacy-webfont.woff2') format('woff2'), url('../fonts/helveticacy-webfont.woff') format('woff'), url('../fonts/helveticacy-webfont.ttf') format('truetype'), url('../fonts/helveticacy-webfont.svg#helvetica_cyplain') format('svg');
+}
+
+@font-face {
+  font-family: 'league_gothicregular';
+  src: url('../fonts/leaguegothic-regular-webfont-webfont.eot');
+  src: url('../fonts/leaguegothic-regular-webfont-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/leaguegothic-regular-webfont-webfont.woff') format('woff'), url('../fonts/leaguegothic-regular-webfont-webfont.ttf') format('truetype'), url('../fonts/leaguegothic-regular-webfont-webfont.svg#league_gothicregular') format('svg');
+}
+
+@font-face {
+  font-family: 'helveticathin';
+  src: url('../fonts/helveticaneue-thin-webfont.eot');
+  src: url('../fonts/helveticaneue-thin-webfont.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneue-thin-webfont.woff2') format('woff2'), url('../fonts/helveticaneue-thin-webfont.woff') format('woff'), url('../fonts/helveticaneue-thin-webfont.ttf') format('truetype'), url('../fonts/helveticaneue-thin-webfont.svg#helvetica_neueregular') format('svg');
+
+}
+
+body {
+  color: #3c3c3c;
+  font-size: 15px;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: arial;
+}
+
+.mobileOnly {
+  display: none;
+
+  @include respond-to('tabletS'){
+    display: block;
+  }
+}
+
+.mobOnly {
+  display: none !important;
+
+  @include respond-to('mobile'){
+    display: block !important;
+  }
+}
+
+.desktopOnly {
+
+  @include respond-to('mobile'){
+    display: none !important;
+  }
+}
+
+.onMove {
+  background: rgba(255, 255, 255, 1) !important;
+  @include transition(all 0.3s ease-out);
+  a {
+    color: #34475d !important;
+  }
+  .logo {
+    background: url(../images/logo-small-blue.png) top left no-repeat !important;
+    background-size: 90% 90% !important;
+  }
+}
+
+.onMoveStatic {
+  background: rgba(255, 255, 255, 1) !important;
+  @include transition(all 0.3s ease-out);
+  a {
+    color: #34475d !important;
+  }
+
+  @media(min-width: 768px) {
+    .logo {
+      background: url(../images/logo-small-blue.png) top left no-repeat !important;
+      background-size: 90% 90% !important;
+    }
+  }
+}
+
+#nav {
+  padding-bottom: 0;
+  border: none;
+  height: 55px;
+  width: 100%;
+  position: fixed;
+  background: rgba(255, 255, 255, 0);
+
+  @include respond-to('tabletS'){
+    background: none;
+  }
+
+  .navbar {
+    border: none;
+    float:left;
+
+    @include respond-to('tabletS'){
+      float: none;
+    }
+
+
+    ul {
+      height: 55px;
+      li {
+        height: 100%;
+        a {
+          height: 100%;
+          color: #FFFFFF;
+          font-family: futuramedium;
+          font-size: 18px;
+          padding: 25px 15px 5px 15px;
+        }
+        a:hover {
+          @include transition(all 0.3s ease-out);
+          color: #34475d;
+        }
+      }
+    }
+
+    .menuToggle {
+
+      a {
+        color: #000000;
+        font-family: league_gothicregular, arial;
+        font-size: 30px;
+        text-transform: uppercase;
+        padding-top: 20px;
+        text-decoration: none;
+        position: relative;
+        top: -40px;
+      }
+
+      a:hover {
+        @include transition(all 0.3s ease-out);
+        color: #34475d;
+      }
+
+      .toggleContainer {
+        background: rgba(255, 255, 255, 1);
+        width: 55px;
+        padding: 10px 5px 0 5px;
+        margin-top: -8px;
+        height: 60px;
+      }
+    }
+  }
+
+  .container {
+    width: 1080px;
+    margin: 0 auto;
+    height: 100%;
+
+    .logo {
+      width: 100px;
+      height: 52px;
+      float: left;
+      margin-top: 3px;
+      background: url(../images/logo-small.png) top left no-repeat;
+      background-size: 90% 90%;
+      @include respond-to('tabletS'){
+        background: none;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        @include respond-to('tabletS'){
+          display: none;
+        }
+
+      }
+
+      img {
+        height: $picHeight;
+        @include respond-to('tabletS'){
+          display: none;
+        }
+      }
+    }
+  }
+
+  @include respond-to('tabletS'){
+
+    .mainNav {
+      position: relative;
+
+      ul a {
+        font-size: 30px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        color: #000;
+        width: 100%;
+        padding-left: 18px;
+      }
+
+      .navbar-nav {
+        background: none;
+        width: 130px;
+        padding: 0;
+        position: absolute;
+        top: 50px;
+        display: none;
+        left: 0;
+      }
+
+      ul {
+        display: block;
+        height: 30px;
+        background: none;
+        li {
+          display: block;
+          background: rgba(255, 255, 255, 1);
+          width: 100%;
+          a {
+            height: 30px;
+            padding: 5px;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+
+#mainHead {
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+  background-size: 100% auto;
+  width: 100%;
+  overflow: hidden;
+  display: block;
+  background-image: url(../images/bg00-1000.jpg);
+
+  @media(max-width: 1500px) {
+    background-size: 120% auto;
+  }
+  @media(max-width: 1200px) {
+    background-image: url(../images/bg00-768.jpg);
+    background-size: 100% auto;
+  }
+  @media(max-width: 960px) {
+    background-size: 150% auto;
+  }
+  @include respond-to('mobile'){
+    background-image: url(../images/bg00-400.jpg);
+    padding-top: 80px;
+  }
+
+  .mainLogo {
+    height: 500px;
+    overflow: hidden;
+    padding-top: 0px;
+    @include respond-to('mobile'){
+      height: auto;
+    }
+
+    .row {
+      width: 1080px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 100px;
+
+      @include respond-to('mobile'){
+        padding-top: 10px;
+      }
+
+      @include respond-to('tablet'){
+        width: 720px;
+      }
+
+      @include respond-to('mobile'){
+        width: 300px;
+        img {
+          width: 60%;
+        }
+      }
+
+      h1 {
+        font-family: futuramedium;
+        font-size: 55px;
+        color: #FFF;
+        padding: 20px 0 0 0;
+
+        @include respond-to('tabletS'){
+          font-size: 45px;
+        }
+        @include respond-to('mobile'){
+          font-size: 25px;
+        }
+      }
+
+      h2 {
+        color: #FFF;
+        font-family: helvetica_cyplain;
+        font-size: 26px;
+
+        @include respond-to('tabletS'){
+          font-size: 20px;
+        }
+        @include respond-to('mobile'){
+          font-size: 24px;
+        }
+      }
+    }
+  }
+
+  .selectContainer {
+    width: 100%;
+    height: 190px;
+    @include respond-to('mobile'){
+      height: 198px;
+    }
+    background: rgba(0, 0, 0, 0.4);
+
+    .selOnFocus {
+      background: rgba(255, 255, 255, 0.15);
+      @include transition(all 0.3s ease-out);
+    }
+
+    .selRow {
+      width: 1080px;
+      margin: 0 auto;
+      height: 100%;
+
+      @include respond-to('tablet'){
+        width: 720px;
+      }
+      @include respond-to('mobile'){
+        width: 320px;
+      }
+
+      #moving, #mover, #getapp {
+        height: 100%;
+        display: inline-block;
+        text-align: center;
+        float: left;
+        font-family: helveticathin, arial;
+        color: #FFF;
+
+        p {
+          margin: 8px 0;
+
+          @include respond-to('mobile'){
+            display: inline;
+          }
+        }
+        a {
+          color: #FFF;
+          text-decoration: none;
+          display: block;
+
+        }
+        .small {
+          font-size: 22px;
+          @include respond-to('tablet'){
+            font-size: 18px;
+          }
+        }
+        .big {
+          font-size: 30px;
+          @include respond-to('tablet'){
+            font-size: 24px;
+          }
+        }
+
+        @include respond-to('mobile'){
+          height: 30px;
+          a {
+            width: 100%;
+
+          }
+        }
+
+      }
+
+      #moving, #mover {
+        width: 35%;
+        @include respond-to('mobile'){
+          width: 100%;
+          display: block;
+          margin: 8px 0;
+          a {
+            font-size: 22px;
+          }
+        }
+      }
+
+      #getapp {
+        width: 29.2%;
+        padding-top: 15px;
+
+        p {
+          margin-top: 10px;
+          @include respond-to('mobile'){
+            margin-top: 0px;
+          }
+          a {
+
+            height: 100%;
+            border-radius: 10px;
+            margin: 0 auto;
+            width: 73.96825%;
+            @include respond-to('tablet'){
+              img {
+                width: 100%;
+              }
+            }
+          }
+          a:hover {
+            background: rgba(255, 255, 255, 0.15);
+            @include transition(all 0.3s ease-out);
+          }
+        }
+
+        @include respond-to('mobile'){
+          width: 100%;
+          padding-top: 0px;
+          height: 70px;
+          clear: both;
+        }
+      }
+
+      #getappmob {
+        height: 70px;
+        width: 100%;
+
+        p {
+          text-align: center;
+        }
+
+        a {
+          height: 43px;
+          display: inline-block;
+        }
+
+        img {
+          width: 70%;
+        }
+      }
+
+    }
+  }
+}
+

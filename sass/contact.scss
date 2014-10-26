@@ -1,0 +1,144 @@
+@import '_prepend';
+
+#contactCont{
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+
+  .row{
+
+    h1{
+      font-family: helveticathin;
+      font-size: 55px;
+      color: #242728;
+      margin: 5px 0;
+      @include respond-to('mobile'){
+        font-size: 32px;
+      }
+    }
+
+    h3{
+      font-size: 22px;
+      color: #242728;
+      margin: 5px 0;
+      @include respond-to('mobile'){
+        font-size: 14px;
+        margin: 15px 0;
+      }
+    }
+
+    .formContainer{
+      margin: 50px 0;
+      width: 100%;
+
+      .errors{
+        margin-bottom: 20px;
+        color: #c44444;
+        font-weight: bold;
+        font-size: 12px;
+        p{
+          margin: 0;
+        }
+      }
+
+      .topContent, .bodyCont{
+
+        ul{
+
+          li{
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            height: 70px;
+
+            @include respond-to('mobile'){
+              width: 100%;
+            }
+
+
+            input[type="text"]{
+              width: 100%;
+              height: 100%;
+              text-align: center;
+            }
+
+            textarea{
+              width: 100%;
+              height: 100%;
+              padding: 10px;
+            }
+
+            input[type="submit"]{
+              width: 100%;
+              height: 100%;
+              background: #df3018;
+              border: none;
+              @include transition(all 0.3s ease-out);
+              font-family: futuramedium;
+              font-size: 30px;
+              color: #FFF;
+              text-transform: uppercase;
+
+              &:hover{
+                background: #962313;
+              }
+            }
+          }
+        }
+
+        ul.botSubmit{
+          li{
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+  .info{
+    height: auto;
+    background: #df3018;
+    margin-top: 50px;
+    padding: 50px 10px;
+    color: #FFF;
+    text-align: left;
+    @include transition(all 0.5s ease-out);
+
+    h3{
+      font-family: futuramedium;
+      font-size: 50px;
+      color: #FFF;
+      text-align: left;
+      margin-bottom: 40px;
+
+      @include respond-to('tablet'){
+        font-size: 38px;
+      }
+      @include respond-to('mobile'){
+        font-size: 32px;
+      }
+    }
+
+    p{
+      text-align: left;
+      font-family: futuramedium;
+      font-size: 30px;
+
+      @include respond-to('tablet'){
+        font-size: 26px;
+      }
+      @include respond-to('mobile'){
+        font-size: 18px;
+      }
+
+      a{
+        color: #FFF;
+      }
+    }
+  }
+
+  .info.active{
+    background: #ef6a58;
+  }
+}

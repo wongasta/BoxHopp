@@ -1,0 +1,43 @@
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/box-shadow";
+
+@mixin respond-to($media) {
+  @if $media == tablet {
+    @media only screen and (max-width: 1080px) { @content; }
+  }
+  @else if $media == tabletS {
+    @media only screen and (max-width: 768px) { @content; }
+  }
+  @else if $media == mobile {
+    @media only screen and (max-width: 480px) { @content; }
+  }
+}
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes $animation-name {
+    @content;
+  }
+  @-moz-keyframes $animation-name {
+    @content;
+  }
+  @keyframes $animation-name {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+}
+
+.row{
+  text-align: center;
+  margin: 0 auto;
+  width: 1080px;
+  @include respond-to('tablet'){
+    width: 768px;
+  }
+  @include respond-to('mobile'){
+    width: 300px;
+  }
+}
