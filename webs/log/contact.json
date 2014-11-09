@@ -1,0 +1,25 @@
+{
+    "contacts": [
+        {
+            "firstName": "emil",
+            "lastName": "addis",
+            "email": "test@gmail.com",
+            "telephone": "8888888888",
+            "details": "sdfsfd"
+        },
+        {
+            "firstName": "emil2",
+            "lastName": "addis2",
+            "email": "test@gmail.com",
+            "telephone": "8888888888",
+            "details": "sdfsfd"
+        },
+        {
+            "firstName": "yixin",
+            "lastName": "xia",
+            "email": "sdfdsf@yahoo.com",
+            "telephone": "7777777777",
+            "details": "sdsdffdsfsfdasdfdfs afdsdfa"
+        }
+    ]
+}

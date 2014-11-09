@@ -7,31 +7,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/pricing.css"/>
 
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+    <?php include 'inc/header.inc'; ?>
 </head>
 <body>
 
-<div id="nav" class="navbar navbar-fixed-top mainNavTop">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"></a>
-        </div>
-        <div class="navbar navMenu mainNav">
-            <div class="menuToggle mobileOnly">
-                <div class="toggleContainer">
-                    <a href="#">Menu</a>
-                </div>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movers.html">Membership</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<?php include 'inc/menu.inc'; ?>
 
 <div id="pricingCont">
     <div class="row">
@@ -51,7 +32,7 @@
                     </ul>
                 </div>
                 <div class="signup">
-                    <a href="#" class="green">Sign Up</a>
+                    <a href="signup" class="green">Sign Up</a>
                 </div>
             </div>
             <div class="box premium blue">
@@ -68,7 +49,7 @@
                     </ul>
                 </div>
                 <div class="signup">
-                    <a href="#" class="blue">Sign Up</a>
+                    <a href="signup" class="blue">Sign Up</a>
                 </div>
             </div>
         </div>
@@ -77,70 +58,44 @@
 
 <div id="priceList">
     <div class="row">
-        <h2>Check Out One of Our Amazing Deals</h2>
+        <h2>Try out the Premium Plan for 99 cents for the first month</h2>
+        <h3>Your payment does not start until after the month trial period. You can cancel anytime</h3>
         <div class="plans">
             <ul class="list-unstyled">
                 <li class="blueTop">
-                    <h3>Free</h3>
-                    <h4>Free Plan</h4>
-                    <p class="price">99&cent;</p>
+                    <h3>Standard</h3>
+                    <h4>Standard Plan</h4>
+                    <p class="price">FREE</p>
                     <h5>No Billing!</h5>
-                    <a href="#" class="signup">Sign Up</a>
+                    <a href="signup?plan=free" class="signup">Sign Up</a>
                 </li>
                 <li class="redTop">
                     <h3>Premium</h3>
                     <h4>Annual Plan</h4>
                     <p class="price">$135</p>
                     <h5>Billed Per Month</h5>
-                    <a href="#" class="signup">Sign Up</a>
+                    <a href="signup?plan=yearly" class="signup">Sign Up</a>
                 </li>
                 <li class="orangeTop">
                     <h3>Premium</h3>
                     <h4>Quarterly Plan</h4>
                     <p class="price">$195</p>
                     <h5>Billed Per Month</h5>
-                    <a href="#" class="signup">Sign Up</a>
+                    <a href="signup?plan=quarterly" class="signup">Sign Up</a>
                 </li>
                 <li class="greenTop">
                     <h3>Premium</h3>
                     <h4>Monthly Plan</h4>
                     <p class="price">$225</p>
                     <h5>Billed Per Month</h5>
-                    <a href="#" class="signup">Sign Up</a>
+                    <a href="signup?plan=monthly" class="signup">Sign Up</a>
                 </li>
             </ul>
         </div>
     </div>
 </div>
 
-<div id="footer">
-    <div class="row">
-        <div class="box companyinfo">
-            <h3>Company Info</h3>
-            <ul>
-                <li><a href="privacy-policy.html">Privacy Police</a></li>
-                <li><a href="term-of-use.html">Term of Use</a></li>
-            </ul>
-            <p>Copyright &copy; 2014 EmYa Technologies, All rights reserved.</p>
-        </div>
-        <div class="box contact">
-            <h3>Contact</h3>
-            <ul>
-                <li>General Support: (330) 275-3645</li>
-                <li>General Support: <a href="mailto:support@boxhopp.com">support@boxhopp.com</a></li>
-                <li>Technical Support: <a href="mailto:boxhoppteam@boxhopp.com">boxhoppteam@boxhopp.com</a></li>
-            </ul>
-        </div>
-        <div class="box socialmedia">
-            <h3>Social Media</h3>
-            <ul>
-                <li><a href="http://facebook.com" class="facebook"></a></li>
-                <li><a href="http://twitter.com" class="twitter"></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<?php include 'inc/footer.inc'; ?>
 
 <script src="_js/jquery/jquery.js"></script>
 <script src="_js/jquery-ui/jquery-ui.js"></script>

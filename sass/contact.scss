@@ -32,10 +32,16 @@
       width: 100%;
 
       .errors{
-        margin-bottom: 20px;
         color: #c44444;
         font-weight: bold;
-        font-size: 12px;
+        font-size: 14px;
+        background: #eecccc;
+        border: 1px solid #cf7272;
+        display: none;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+        margin-bottom: 20px;
         p{
           margin: 0;
         }
@@ -98,7 +104,7 @@
   }
   .info{
     height: auto;
-    background: #df3018;
+    background: #494949;
     margin-top: 50px;
     padding: 50px 10px;
     color: #FFF;
@@ -139,6 +145,6 @@
   }
 
   .info.active{
-    background: #ef6a58;
+    background: #585858;
   }
 }

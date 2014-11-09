@@ -2,8 +2,6 @@ var moverMain = {
     'resizeSplash': function () {
         if ($(window).height() >= 680) {
             var userHeight = $(window).height() + 1;
-        } else if ($(window).width() <= 420) {
-            var userHeight = $(window).height() + 1;
         } else {
             var userHeight = 680;
         }
@@ -35,8 +33,17 @@ var moverContent ={
         $('.custom3').animate({
             top: 0
         }, 900);
-    }, {offset: (mainModule.checkMobile() ? 700 : 800)})
-}
+    }, {offset: (mainModule.checkMobile() ? 700 : 800)}),
+    'twoActivated': false,
+    'twoDiv': $('#twoDiv').waypoint(function(){
+        if (!this.twoActivated && !mainModule.checkMobile()){
+            $('#twoDiv .left, #twoDiv .right').animate({
+                width: '50%'
+            }, 300);
+            this.twoActivated=true;
+        }
+    },{offset: (mainModule.checkMobile() ? 700 : 400)})
+};
 
 
 moverMain.init();

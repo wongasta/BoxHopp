@@ -1,0 +1,37 @@
+/* line 33, ../sass/_prepend.scss */
+.row {
+  text-align: center;
+  margin: 0 auto;
+  width: 1080px;
+}
+@media only screen and (max-width: 1080px) {
+  /* line 33, ../sass/_prepend.scss */
+  .row {
+    width: 768px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  /* line 33, ../sass/_prepend.scss */
+  .row {
+    width: 300px;
+  }
+}
+
+/* line 45, ../sass/_prepend.scss */
+.callback {
+  display: none;
+  min-height: 700px;
+}
+
+/* line 3, ../sass/legal.scss */
+#legalDiv {
+  margin-top: 150px;
+  text-align: center;
+  padding-bottom: 100px;
+}
+/* line 7, ../sass/legal.scss */
+#legalDiv h1 {
+  font-family: futuramedium;
+  font-size: 40px;
+  text-transform: uppercase;
+}

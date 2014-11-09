@@ -1,0 +1,258 @@
+@import '_prepend';
+
+#contactCont{
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+
+  .row{
+
+    h1{
+      font-family: helveticathin;
+      font-size: 55px;
+      color: #242728;
+      margin: 5px 0;
+      @include respond-to('mobile'){
+        font-size: 32px;
+      }
+    }
+
+    h3{
+      font-size: 28px;
+      color: #242728;
+      margin: 15px 0;
+      @include respond-to('mobile'){
+        font-size: 14px;
+        margin: 15px 0;
+      }
+    }
+
+    .formContainer{
+      margin: 50px 0;
+      width: 100%;
+
+      .pricingCont{
+
+        ul{
+          margin: 0;
+          padding: 0;
+          color: #3c3c3c;
+
+          li{
+            display: inline-block;
+            vertical-align: top;
+            width: 22.5%;
+            margin: 0 1%;
+            border: 1px solid #dbdbdb;
+            margin-bottom: 30px;
+
+            @include respond-to('tablet'){
+              width: 45%;
+              margin: 2%;
+            }
+
+            @include respond-to('mobile'){
+              display: block;
+              width: 90%;
+              margin: 0 auto;
+              margin-top: 2%;
+              margin-bottom: 2%;
+            }
+
+            .radiocheck{
+              padding: 30px 0 10px 0;
+              border-bottom: 1px solid #dbdbdb;
+              margin: 0 10%;
+
+              label{
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                padding-left: 22%;
+                text-align: left;
+                width: auto;
+                font-family: futuramedium;
+                font-size: 30px;
+              }
+
+              input[type=radio] {
+                display: none;
+              }
+
+              label:before {
+                content: "";
+                display: inline-block;
+
+                width: 30px;
+                height: 30px;
+
+                margin-right: 10px;
+                position: absolute;
+                left: 0;
+                top: 10%;
+                background-color: #c2dad4;
+                border-radius: 20%;
+                box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+              }
+
+
+              input[type=radio]:checked + label:before {
+                content: url(../images/checkRadio.png);
+                text-align: center;
+
+              }
+
+            }
+
+            .desc{
+              padding: 3% 10% 10% 10%;
+              font-size: 16px;
+              min-height: 220px;
+
+              h3{
+                font-family: futuramedium;
+                font-size: 26px;
+                text-transform: uppercase;
+              }
+
+
+
+            }
+
+          }
+        }
+      }
+
+      .addButton, .minusButton{
+        margin: 0 auto;
+        display: inline-block;
+        vertical-align: middle;
+        color: #FFF;
+        background: #df3018;
+        width: 220px;
+        height: 60px;
+        @include transition(all 0.3s ease-out);
+        font-family: futuramedium;
+        font-size: 25px;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 15px 10px 0 10px;
+        margin-bottom: 50px;
+
+        @include respond-to('mobile'){
+          margin-bottom: 5px;
+        }
+
+        img{
+          height: 90%;
+          margin-top: -10px;
+        }
+
+        &:hover{
+          background: #962313;
+          text-decoration: none;
+        }
+      }
+
+      .errors{
+        color: #c44444;
+        font-weight: bold;
+        font-size: 14px;
+        background: #eecccc;
+        border: 1px solid #cf7272;
+        display: none;
+        width: 50%;
+        margin: 0 auto;
+        padding: 15px;
+        margin-bottom: 20px;
+
+
+        p{
+          margin: 10px 0;
+        }
+      }
+
+      .customAdd{
+        margin: 50px 0;
+
+        h3{
+          margin-bottom: 30px;
+        }
+      }
+
+      .topContent, .bodyCont, .customAdd{
+
+        .infoBox{
+          width: 50%;
+          min-height: 50px;
+          margin: 0 auto;
+          margin-bottom: 6%;
+          margin-top: 6%;
+          text-size: 16px;
+          border: 1px solid #c2e1bd;
+          padding: 10px;
+          background: #e0f8dc;
+
+          @include respond-to('mobile'){
+            width: 90%;
+          }
+        }
+
+        ul{
+
+          li{
+            display: inline-block;
+            vertical-align: top;
+            width: 40%;
+            margin: 0 auto;
+            padding: 10px 20px;
+            height: 70px;
+
+            @include respond-to('mobile'){
+              width: 100%;
+            }
+
+
+            input[type="text"], select{
+              width: 100%;
+              height: 100%;
+              text-align: center;
+
+              option{
+                text-align: center;
+              }
+            }
+
+            textarea{
+              width: 100%;
+              height: 100%;
+              padding: 10px;
+            }
+
+            input[type="submit"]{
+              width: 100%;
+              height: 100%;
+              background: #df3018;
+              border: none;
+              @include transition(all 0.3s ease-out);
+              font-family: futuramedium;
+              font-size: 30px;
+              color: #FFF;
+              text-transform: uppercase;
+
+              &:hover{
+                background: #962313;
+              }
+            }
+          }
+        }
+
+        ul.botSubmit{
+          li{
+            height: 140px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -135,13 +135,22 @@
 .customDiv{
   width: 100%;
   background: #1b5a68;
-  padding: 6% 0;
+  padding-bottom: 6%;
   overflow: hidden;
 
   .row{
 
+    h2{
+      font-family: futuramedium;
+      font-size: 30px;
+      color: #fff;
+      text-transform: uppercase;
+      margin-top: 50px;
+    }
+
     .leftCol{
       width: 35%;
+      padding-top: 10%;
       @include respond-to('tablet'){
         width: 100%;
       }
@@ -149,17 +158,18 @@
       p{
         text-align: left;
         font-family: futuramedium;
-        font-size: 20px;
+        font-size: 26px;
         color: #fff;
         text-transform: uppercase;
-        margin: 35px 0;
+        margin: 7% 0;
 
         @include respond-to('tablet'){
           text-align: center;
-          font-size: 18px;
+          font-size: 24px;
+          margin: 10% 0;
         }
         @include respond-to('mobile'){
-          font-size: 14px;
+          font-size: 20px;
           margin: 15px 0;
           padding: 0 10px;
         }
@@ -306,5 +316,96 @@
         font-size: 18px;
       }
     }
+  }
+}
+
+#twoDiv{
+  height: 500px;
+  background: #1b5a68;
+
+  .bg{
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+
+    .left, .right{
+      width: 0%;
+      height: 100%;
+      display: block;
+      float: left;
+
+      @include respond-to('mobile'){
+        float: none;
+        display: block;
+        width: 100%;
+      }
+
+      .content{
+        width: 540px;
+        text-align: center;
+        padding: 3% 3% 0 3%;
+
+        @include respond-to('tablet'){
+          width: 384px;
+          padding-top: 50px;
+
+          img{
+            width: 90%;
+            margin-top: 50px;
+          }
+        }
+        @include respond-to('tabletS'){
+          width: 300px;
+          padding-top: 30px;
+
+          img{
+            width: 80%;
+          }
+        }
+
+        p{
+          font-family: futuramedium;
+          font-size: 26px;
+          color: #fff;
+          height: 160px;
+
+          @include respond-to('tabletS'){
+            height: 220px;
+          }
+        }
+      }
+    }
+
+    .left{
+      background: #3F3F86;
+      float: left;
+      @include respond-to('mobile'){
+        clear: both;
+        text-align: center;
+      }
+      .content{
+        float: right;
+
+        @include respond-to('mobile'){
+          float: none;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .right{
+      background: #9D3D32;
+      float: right;
+
+      .content{
+
+        @include respond-to('mobile'){
+          float: none;
+          margin: 0 auto;
+        }
+      }
+    }
+
   }
 }

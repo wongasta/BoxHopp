@@ -17,6 +17,12 @@
   }
 }
 
+/* line 45, ../sass/_prepend.scss */
+.callback {
+  display: none;
+  min-height: 700px;
+}
+
 /* line 3, ../sass/contact.scss */
 #contactCont {
   width: 100%;
@@ -56,16 +62,22 @@
 }
 /* line 34, ../sass/contact.scss */
 #contactCont .row .formContainer .errors {
-  margin-bottom: 20px;
   color: #c44444;
   font-weight: bold;
-  font-size: 12px;
+  font-size: 14px;
+  background: #eecccc;
+  border: 1px solid #cf7272;
+  display: none;
+  width: 50%;
+  margin: 0 auto;
+  padding: 15px;
+  margin-bottom: 20px;
 }
-/* line 39, ../sass/contact.scss */
+/* line 45, ../sass/contact.scss */
 #contactCont .row .formContainer .errors p {
   margin: 0;
 }
-/* line 48, ../sass/contact.scss */
+/* line 54, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul li, #contactCont .row .formContainer .bodyCont ul li {
   display: inline-block;
   vertical-align: top;
@@ -75,24 +87,24 @@
   height: 70px;
 }
 @media only screen and (max-width: 480px) {
-  /* line 48, ../sass/contact.scss */
+  /* line 54, ../sass/contact.scss */
   #contactCont .row .formContainer .topContent ul li, #contactCont .row .formContainer .bodyCont ul li {
     width: 100%;
   }
 }
-/* line 61, ../sass/contact.scss */
+/* line 67, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul li input[type="text"], #contactCont .row .formContainer .bodyCont ul li input[type="text"] {
   width: 100%;
   height: 100%;
   text-align: center;
 }
-/* line 67, ../sass/contact.scss */
+/* line 73, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul li textarea, #contactCont .row .formContainer .bodyCont ul li textarea {
   width: 100%;
   height: 100%;
   padding: 10px;
 }
-/* line 73, ../sass/contact.scss */
+/* line 79, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul li input[type="submit"], #contactCont .row .formContainer .bodyCont ul li input[type="submit"] {
   width: 100%;
   height: 100%;
@@ -107,18 +119,18 @@
   color: #FFF;
   text-transform: uppercase;
 }
-/* line 84, ../sass/contact.scss */
+/* line 90, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul li input[type="submit"]:hover, #contactCont .row .formContainer .bodyCont ul li input[type="submit"]:hover {
   background: #962313;
 }
-/* line 92, ../sass/contact.scss */
+/* line 98, ../sass/contact.scss */
 #contactCont .row .formContainer .topContent ul.botSubmit li, #contactCont .row .formContainer .bodyCont ul.botSubmit li {
   height: 140px;
 }
-/* line 99, ../sass/contact.scss */
+/* line 105, ../sass/contact.scss */
 #contactCont .info {
   height: auto;
-  background: #df3018;
+  background: #494949;
   margin-top: 50px;
   padding: 50px 10px;
   color: #FFF;
@@ -128,7 +140,7 @@
   -o-transition: all 0.5s ease-out;
   transition: all 0.5s ease-out;
 }
-/* line 108, ../sass/contact.scss */
+/* line 114, ../sass/contact.scss */
 #contactCont .info h3 {
   font-family: futuramedium;
   font-size: 50px;
@@ -137,40 +149,40 @@
   margin-bottom: 40px;
 }
 @media only screen and (max-width: 1080px) {
-  /* line 108, ../sass/contact.scss */
+  /* line 114, ../sass/contact.scss */
   #contactCont .info h3 {
     font-size: 38px;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 108, ../sass/contact.scss */
+  /* line 114, ../sass/contact.scss */
   #contactCont .info h3 {
     font-size: 32px;
   }
 }
-/* line 123, ../sass/contact.scss */
+/* line 129, ../sass/contact.scss */
 #contactCont .info p {
   text-align: left;
   font-family: futuramedium;
   font-size: 30px;
 }
 @media only screen and (max-width: 1080px) {
-  /* line 123, ../sass/contact.scss */
+  /* line 129, ../sass/contact.scss */
   #contactCont .info p {
     font-size: 26px;
   }
 }
 @media only screen and (max-width: 480px) {
-  /* line 123, ../sass/contact.scss */
+  /* line 129, ../sass/contact.scss */
   #contactCont .info p {
     font-size: 18px;
   }
 }
-/* line 135, ../sass/contact.scss */
+/* line 141, ../sass/contact.scss */
 #contactCont .info p a {
   color: #FFF;
 }
-/* line 141, ../sass/contact.scss */
+/* line 147, ../sass/contact.scss */
 #contactCont .info.active {
-  background: #ef6a58;
+  background: #585858;
 }

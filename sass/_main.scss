@@ -36,7 +36,7 @@ body {
 .mobileOnly {
   display: none;
 
-  @include respond-to('tabletS'){
+  @include respond-to('tabletS') {
     display: block;
   }
 }
@@ -44,42 +44,15 @@ body {
 .mobOnly {
   display: none !important;
 
-  @include respond-to('mobile'){
+  @include respond-to('mobile') {
     display: block !important;
   }
 }
 
 .desktopOnly {
 
-  @include respond-to('mobile'){
+  @include respond-to('mobile') {
     display: none !important;
-  }
-}
-
-.onMove {
-  background: rgba(255, 255, 255, 1) !important;
-  @include transition(all 0.3s ease-out);
-  a {
-    color: #34475d !important;
-  }
-  .logo {
-    background: url(../images/logo-small-blue.png) top left no-repeat !important;
-    background-size: 90% 90% !important;
-  }
-}
-
-.onMoveStatic {
-  background: rgba(255, 255, 255, 1) !important;
-  @include transition(all 0.3s ease-out);
-  a {
-    color: #34475d !important;
-  }
-
-  @media(min-width: 768px) {
-    .logo {
-      background: url(../images/logo-small-blue.png) top left no-repeat !important;
-      background-size: 90% 90% !important;
-    }
   }
 }
 
@@ -91,18 +64,42 @@ body {
   position: fixed;
   background: rgba(255, 255, 255, 0);
 
-  @include respond-to('tabletS'){
+  .login {
+    float: right;
+
+    a{
+      display: block;
+      height: 100%;
+      color: #FFFFFF;
+      font-family: futuramedium;
+      font-size: 18px;
+      margin: 10px 0 0 0;
+      padding: 5px;
+      border: #FFF 1px solid;
+      border-radius: 5px;
+      @include transition(all 0.3s ease-out);
+      &:hover{
+        text-decoration: none;
+        opacity: 0.9;
+      }
+    }
+
+    @include respond-to('tabletS') {
+      display: none;
+    }
+  }
+
+  @include respond-to('tabletS') {
     background: none;
   }
 
   .navbar {
     border: none;
-    float:left;
+    float: left;
 
-    @include respond-to('tabletS'){
+    @include respond-to('tabletS') {
       float: none;
     }
-
 
     ul {
       height: 55px;
@@ -151,7 +148,6 @@ body {
   }
 
   .container {
-    width: 1080px;
     margin: 0 auto;
     height: 100%;
 
@@ -162,7 +158,7 @@ body {
       margin-top: 3px;
       background: url(../images/logo-small.png) top left no-repeat;
       background-size: 90% 90%;
-      @include respond-to('tabletS'){
+      @include respond-to('tabletS') {
         background: none;
       }
 
@@ -170,7 +166,7 @@ body {
         display: block;
         width: 100%;
         height: 100%;
-        @include respond-to('tabletS'){
+        @include respond-to('tabletS') {
           display: none;
         }
 
@@ -178,14 +174,14 @@ body {
 
       img {
         height: $picHeight;
-        @include respond-to('tabletS'){
+        @include respond-to('tabletS') {
           display: none;
         }
       }
     }
   }
 
-  @include respond-to('tabletS'){
+  @include respond-to('tabletS') {
 
     .mainNav {
       position: relative;
@@ -228,6 +224,41 @@ body {
   }
 }
 
+.onMove {
+  background: rgba(255, 255, 255, 1) !important;
+  @include transition(all 0.3s ease-out);
+  a {
+    color: #34475d !important;
+  }
+  .logo {
+    background: url(../images/logo-small-blue.png) top left no-repeat !important;
+    background-size: 90% 90% !important;
+  }
+  .login a{
+    border: 1px solid #34475d !important;
+  }
+}
+
+.onMoveStatic {
+  background: rgba(255, 255, 255, 1) !important;
+  @include transition(all 0.3s ease-out);
+  a {
+    color: #34475d !important;
+  }
+
+  @media(min-width: 768px) {
+    .logo {
+      background: url(../images/logo-small-blue.png) top left no-repeat !important;
+      background-size: 90% 90% !important;
+    }
+  }
+  .login a{
+    border: 1px solid #34475d !important;
+  }
+}
+
+
+
 #mainHead {
   background-repeat: no-repeat;
   background-position: bottom center;
@@ -236,28 +267,29 @@ body {
   width: 100%;
   overflow: hidden;
   display: block;
-  background-image: url(../images/bg00-1000.jpg);
+  background-image: url(../images/bg00-1500.jpg);
 
   @media(max-width: 1500px) {
-    background-size: 120% auto;
+    background-image: url(../images/bg00-1000.jpg);
+    background-size: 110% auto;
   }
   @media(max-width: 1200px) {
-    background-image: url(../images/bg00-768.jpg);
-    background-size: 100% auto;
+    background-image: url(../images/bg00-1000.jpg);
+    background-size: 120% auto;
   }
   @media(max-width: 960px) {
-    background-size: 150% auto;
+    background-image: url(../images/bg00-768.jpg);
+    background-size: 120% auto;
   }
-  @include respond-to('mobile'){
+  @include respond-to('mobile') {
     background-image: url(../images/bg00-400.jpg);
-    padding-top: 80px;
   }
 
   .mainLogo {
     height: 500px;
     overflow: hidden;
     padding-top: 0px;
-    @include respond-to('mobile'){
+    @include respond-to('mobile') {
       height: auto;
     }
 
@@ -267,15 +299,15 @@ body {
       margin: 0 auto;
       padding-top: 100px;
 
-      @include respond-to('mobile'){
+      @include respond-to('mobile') {
         padding-top: 10px;
       }
 
-      @include respond-to('tablet'){
+      @include respond-to('tablet') {
         width: 720px;
       }
 
-      @include respond-to('mobile'){
+      @include respond-to('mobile') {
         width: 300px;
         img {
           width: 60%;
@@ -288,10 +320,10 @@ body {
         color: #FFF;
         padding: 20px 0 0 0;
 
-        @include respond-to('tabletS'){
+        @include respond-to('tabletS') {
           font-size: 45px;
         }
-        @include respond-to('mobile'){
+        @include respond-to('mobile') {
           font-size: 25px;
         }
       }
@@ -301,10 +333,10 @@ body {
         font-family: helvetica_cyplain;
         font-size: 26px;
 
-        @include respond-to('tabletS'){
+        @include respond-to('tabletS') {
           font-size: 20px;
         }
-        @include respond-to('mobile'){
+        @include respond-to('mobile') {
           font-size: 24px;
         }
       }
@@ -314,7 +346,7 @@ body {
   .selectContainer {
     width: 100%;
     height: 190px;
-    @include respond-to('mobile'){
+    @include respond-to('mobile') {
       height: 198px;
     }
     background: rgba(0, 0, 0, 0.4);
@@ -329,10 +361,10 @@ body {
       margin: 0 auto;
       height: 100%;
 
-      @include respond-to('tablet'){
+      @include respond-to('tablet') {
         width: 720px;
       }
-      @include respond-to('mobile'){
+      @include respond-to('mobile') {
         width: 320px;
       }
 
@@ -347,7 +379,7 @@ body {
         p {
           margin: 8px 0;
 
-          @include respond-to('mobile'){
+          @include respond-to('mobile') {
             display: inline;
           }
         }
@@ -359,18 +391,18 @@ body {
         }
         .small {
           font-size: 22px;
-          @include respond-to('tablet'){
+          @include respond-to('tablet') {
             font-size: 18px;
           }
         }
         .big {
           font-size: 30px;
-          @include respond-to('tablet'){
+          @include respond-to('tablet') {
             font-size: 24px;
           }
         }
 
-        @include respond-to('mobile'){
+        @include respond-to('mobile') {
           height: 30px;
           a {
             width: 100%;
@@ -382,7 +414,7 @@ body {
 
       #moving, #mover {
         width: 35%;
-        @include respond-to('mobile'){
+        @include respond-to('mobile') {
           width: 100%;
           display: block;
           margin: 8px 0;
@@ -398,7 +430,7 @@ body {
 
         p {
           margin-top: 10px;
-          @include respond-to('mobile'){
+          @include respond-to('mobile') {
             margin-top: 0px;
           }
           a {
@@ -407,7 +439,7 @@ body {
             border-radius: 10px;
             margin: 0 auto;
             width: 73.96825%;
-            @include respond-to('tablet'){
+            @include respond-to('tablet') {
               img {
                 width: 100%;
               }
@@ -419,7 +451,7 @@ body {
           }
         }
 
-        @include respond-to('mobile'){
+        @include respond-to('mobile') {
           width: 100%;
           padding-top: 0px;
           height: 70px;
@@ -428,7 +460,7 @@ body {
       }
 
       #getappmob {
-        height: 70px;
+        height: auto;
         width: 100%;
 
         p {

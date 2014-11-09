@@ -7,15 +7,15 @@ var movingMain = {
     'resizeSplash': function(){
         if($(window).height()>=680){
             var userHeight = $(window).height() +1;
-        }else if(mainModule.checkMobile()){
-            var userHeight = $(window).height() +1;
         }else{
             var userHeight = 680;
         }
         $('#mainHead').css({'height':userHeight});
 
         var phHeight = ($(window).height() - ($('.mainLogo').height() + $('.selectContainer').height()))/2;
-        var phHeightMobile = ($(window).height() - ($('.mainLogo').height() + $('.selectContainer').height() + ($('#nav').height() + parseInt($('#nav').css('margin-bottom'))) ))/2;
+
+        //var phHeightMobile = ($(window).height() - ($('.mainLogo').height() + $('.selectContainer').height() + ($('#nav').height() + parseInt($('#nav').css('margin-bottom'))) ))/2;
+        var phHeightMobile = (680 - ($('.mainLogo').height() + $('.selectContainer').height()))/2;
         if(!mainModule.checkMobile()){
             $('#mainHead .placeHolderDiv').css({'height':phHeight});
         }else{
@@ -45,9 +45,6 @@ var mainSelMod = {
         mainModule.scrollToID('#movingCon', 500, offset);
 
 
-    }),
-    'moverSelect': $('.moverSelect').on('click', function(e){
-        e.preventDefault();
     })
 };
 

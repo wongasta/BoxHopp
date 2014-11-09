@@ -7,31 +7,12 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/moving.css"/>
 
     <meta name="viewport" content="width=device-width, user-scalable=no"/>
+
+    <?php include 'inc/header.inc'; ?>
 </head>
 <body class="navTran">
 
-<div id="nav" class="navbar navbar-fixed-top mainNavTop">
-    <div class="container">
-        <div class="logo">
-            <a href="index.html"></a>
-        </div>
-        <div class="navbar navMenu mainNav">
-            <div class="menuToggle mobileOnly">
-                <div class="toggleContainer">
-                    <a href="#">Menu</a>
-                </div>
-            </div>
-            <ul class="nav navbar-nav">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="movers.html">Membership</a></li>
-                <li><a href="pricing.html">Pricing</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="/blog">Blog</a></li>
-            </ul>
-        </div>
-    </div>
-</div>
+<?php include 'inc/menu.inc'; ?>
 
 <div id="mainHead">
     <div class="ph1 placeHolderDiv"></div>
@@ -59,12 +40,12 @@
                 </a>
             </div>
             <div id="getapp" class="desktopOnly">
-                <p><a href="#and" class="android-sel"><img src="images/bar-android.png" alt="Android App"/></a></p>
+                <p><a href="https://play.google.com/store/apps/details?id=com.emya.boxhopp" class="android-sel"><img src="images/bar-android.png" alt="Android App"/></a></p>
 
-                <p><a href="#apl" class="iphone-sel"><img src="images/bar-apple.png" alt="Apple App"/></a></p>
+                <p><!--<a href="#apl" class="iphone-sel"><img src="images/bar-apple.png" alt="Apple App"/></a>--></p>
             </div>
             <div id="mover">
-                <a href="movers.html" class="mover-sel selbtn desktopOnly">
+                <a href="/movers" class="mover-sel selbtn desktopOnly">
                     <p class="small">You are </p>
                     <img src="images/icon-truck.png" alt="moving"/>
 
@@ -75,9 +56,9 @@
                 </a>
             </div>
             <div id="getappmob" class="mobileOnly">
-                <p><a href="#and" class="android-sel"><img src="images/bar-android.png" alt="Android App"/></a></p>
+                <p><a href="https://play.google.com/store/apps/details?id=com.emya.boxhopp" class="android-sel"><img src="images/bar-android.png" alt="Android App"/></a></p>
 
-                <p><a href="#apl" class="iphone-sel"><img src="images/bar-apple.png" alt="Apple App"/></a></p>
+                <p><!--<a href="#apl" class="iphone-sel"><img src="images/bar-apple.png" alt="Apple App"/></a>--></p>
             </div>
         </div>
     </div>
@@ -134,41 +115,12 @@
 
     <div class="block5">
         <div class="row">
-            <p class="topText">"I'm normally a very disorganized guy but a friend told me about this app right before I moved today and I tell you I've never had an easier time finding organizing things in my life"</p>
-            <hr />
-            <p class="botText">As practical as it may seem, the intuitive aspect of the app is the ability to categorize what you need and be able to easily access your items.</p>
-        </div>
+            <p class="topText">&#8220;I'm normally a very disorganized guy but a friend told me about this app right before I moved today and I tell you I've never had an easier time finding organizing things in my life&#8221;</p>
+       </div>
     </div>
 </div>
 
-<div id="footer">
-    <div class="row">
-        <div class="box companyinfo">
-            <h3>Company Info</h3>
-            <ul>
-                <li><a href="privacy-policy.html">Privacy Police</a></li>
-                <li><a href="term-of-use.html">Term of Use</a></li>
-            </ul>
-            <p>Copyright &copy; 2014 EmYa Technologies, All rights reserved.</p>
-        </div>
-        <div class="box contact">
-            <h3>Contact</h3>
-            <ul>
-                <li>General Support: (330) 275-3645</li>
-                <li>General Support: <a href="mailto:support@boxhopp.com">support@boxhopp.com</a></li>
-                <li>Technical Support: <a href="mailto:boxhoppteam@boxhopp.com">boxhoppteam@boxhopp.com</a></li>
-            </ul>
-        </div>
-        <div class="box socialmedia">
-            <h3>Social Media</h3>
-            <ul>
-                <li><a href="http://facebook.com" class="facebook"></a></li>
-                <li><a href="http://twitter.com" class="twitter"></a></li>
-            </ul>
-        </div>
-    </div>
-</div>
-
+<?php include 'inc/footer.inc'; ?>
 
 <script src="_js/jquery/jquery.js"></script>
 <script src="_js/jquery-ui/jquery-ui.js"></script>

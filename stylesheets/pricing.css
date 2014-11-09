@@ -17,6 +17,12 @@
   }
 }
 
+/* line 45, ../sass/_prepend.scss */
+.callback {
+  display: none;
+  min-height: 700px;
+}
+
 /* line 4, ../sass/pricing.scss */
 #pricingCont h1, #priceList h1 {
   font-family: helveticathin;

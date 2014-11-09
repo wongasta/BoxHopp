@@ -23,7 +23,8 @@
         "jquery-ui": "latest",
         "jquery-waypoints": "latest",
         "bootstrap": "latest",
-		"validatejs":"latest"
+		"validatejs":"latest",
+        "jquery-placeholder": "latest"
     },
     "install" : {
         "path"  : {
